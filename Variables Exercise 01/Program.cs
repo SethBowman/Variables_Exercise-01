@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Variables_Exercise_01
 {
@@ -50,7 +51,13 @@ namespace Variables_Exercise_01
             #endregion
 
             // TODO: Declare 5 constansts
+            const int num1 = 1;
+            const int num2 = 2;
+            const string name = "Seth";
+            const string name2 = "Breagan";
+            const bool isAlive = true;
 
+            Console.WriteLine($"Hey, my name is {name}. My wife's name is {name2}.\n{num1} + {num2} = {num1 + num2}.\nIt would be {isAlive} that I am alive today.\n\n");
 
             // TODO: Declare 2 variables of each type from the list above (1 pair for each) 
             // Make sure to use C# naming convention best practices (camelCase, PascalCase, etc...)
@@ -61,7 +68,9 @@ namespace Variables_Exercise_01
             // TODO: Initialize 1 of the variables with that datatypes minimum value
             // TODO: Initialize the other variable with that datatypes maximum value
             // TODO: Write out each of the variables to the Console 
-
+            sbyte min = sbyte.MinValue;
+            sbyte max = sbyte.MaxValue;
+            Console.WriteLine($"Sbyte min: {min} || Sbyte max: {max}\n\n");
 
 
 
@@ -69,6 +78,18 @@ namespace Variables_Exercise_01
             // TODO: Create your own enum and initialize it with constants of your choosing
             // TODO: Declare it and then iterate through it writing out to the console            
             // TODO: Instantiate a struct and initialize all of it's members
+
+            foreach(var day in Enum.GetValues(typeof(MyEnum)))
+            {
+                Console.WriteLine(day);
+            }
+
+            var pointA = new PointA(5.00, 5.00);
+
+            var pointB = new PointB();
+            pointB.X = 10.00;
+            pointB.Y = 10.00;
+            
 
         }
 
